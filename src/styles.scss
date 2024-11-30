@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Prime Icons Import */
+@import "primeicons/primeicons.css";
+
+/* PrimeNg Import */
+@import "primeng/resources/themes/aura-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import 'primeng/resources/primeng.min.css';
+
+/* PrimeFlex Import */
+@import "../node_modules/primeflex/primeflex.css";
+
+html, body {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+h1, h2, h3, h4, h5, p, li, hr, i {
+  color: #323b4c !important;
+}
+li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
