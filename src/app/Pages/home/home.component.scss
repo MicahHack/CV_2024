@@ -1,4 +1,18 @@
 :host {
+  .imgPosition {
+    left: 16.6vw;
+    top: 160px;
+    transform: translateX(-50%);
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .imgPosition {
+      left: 12.5vw !important;
+      top: 160px;
+      transform: translateX(-50%);
+    }
+  }
+
   .cvPic {
     height: 100% !important;
     width: 100% !important;
