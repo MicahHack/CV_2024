@@ -1,3 +1,36 @@
-<div>
-
+<div class="flex flex-row h-full w-full justify-content-start align-items-start mt-5 mb-5">
+  <div style="background-color: #323b4c" class="flex flex-row h-3rem w-3rem border-circle justify-content-center align-items-center text-white z-1 shadow-1 mr-5">
+    <i style="font-size: 24px;" class="pi {{this.icon}} text-white"></i>
+  </div>
+  <div class="flex flex-column h-full w-full justify-content-center align-items-start">
+    <h1 class="mt-0 mb-0">{{ this.title }}</h1>
+    <hr class="w-full" />
+    <div *ngIf="this.profileContent" class="flex flex-column h-full w-full lg:w-8">
+      <p>{{ this.profileContent }}</p>
+    </div>
+    <div *ngIf="this.workItems" class="flex flex-column h-full w-full">
+      <ng-container *ngFor="let item of workItems">
+        <div class="flex flex-column lg:flex-row h-full w-full justify-content-center align-items-start lg:justify-content-between lg:align-items-center">
+          <h2 class="mb-0 font-bold">{{ item.subTitle }}</h2>
+          <p>{{ item.dates }}</p>
+        </div>
+        <h3 class="m-0 font-light">{{ item.jobTitle }}</h3>
+        <ul class="mt-1 ">
+          <ng-container *ngFor="let task of item.tasks">
+            <li class="mt-2 mb-2">{{ task }}</li>
+          </ng-container>
+        </ul>
+      </ng-container>
+    </div>
+    <div *ngIf="this.educationItems" class="flex flex-column h-full w-full">
+      <ng-container *ngFor="let item of educationItems">
+        <div class="flex flex-column lg:flex-row h-full w-full justify-content-center align-items-start lg:justify-content-between lg:align-items-center">
+          <h2 class="mb-0 font-bold">{{ item.institution }}</h2>
+          <p>{{ item.dates }}</p>
+        </div>
+        <h3 class="m-0 font-light">{{ item.certificate }}</h3>
+      </ng-container>
+    </div>
+  </div>
 </div>
+
