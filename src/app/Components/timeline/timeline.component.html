@@ -1,9 +1,12 @@
 <div class="flex flex-row h-full w-full justify-content-start align-items-start mt-5 mb-5">
-  <div style="background-color: #323b4c" class="flex flex-row h-3rem w-3rem border-circle justify-content-center align-items-center text-white z-1 shadow-1 mr-5">
-    <i style="font-size: 24px;" class="pi {{this.icon}} text-white"></i>
+  <div class="flex flex-column h-full w-2 lg:w-1 justify-content-center align-items-center mr-2 lg:mr-5">
+    <div style="height: 45px !important; width: 45px !important; background-color: #323b4c" class="flex flex-row border-circle justify-content-center align-items-center text-white">
+      <i style="font-size: 24px;" class="pi {{this.icon}} text-white"></i>
+    </div>
   </div>
-  <div class="flex flex-column h-full w-full justify-content-center align-items-start">
-    <h1 class="mt-0 mb-0">{{ this.title }}</h1>
+
+  <div class="flex flex-column h-full w-10 lg:w-11 justify-content-center align-items-start">
+    <h1 class="mt-0 mb-0 font-bold">{{ this.title }}</h1>
     <hr class="w-full" />
     <div *ngIf="this.profileContent" class="flex flex-column h-full w-full lg:w-8">
       <p>{{ this.profileContent }}</p>
@@ -12,7 +15,7 @@
       <ng-container *ngFor="let item of workItems">
         <div class="flex flex-column lg:flex-row h-full w-full justify-content-center align-items-start lg:justify-content-between lg:align-items-center">
           <h2 class="mb-0 font-bold">{{ item.subTitle }}</h2>
-          <p>{{ item.dates }}</p>
+          <p>{{ item.dates }}</p> 
         </div>
         <h3 class="m-0 font-light">{{ item.jobTitle }}</h3>
         <ul class="mt-1 ">
@@ -23,13 +26,13 @@
       </ng-container>
     </div>
     <div *ngIf="this.educationItems" class="flex flex-column h-full w-full">
-      <ng-container *ngFor="let item of educationItems">
+      <div *ngFor="let item of educationItems" class="mt-4 mb-4">
         <div class="flex flex-column lg:flex-row h-full w-full justify-content-center align-items-start lg:justify-content-between lg:align-items-center">
-          <h2 class="mb-0 font-bold">{{ item.institution }}</h2>
+          <h2 class="m-0 font-bold">{{ item.institution }}</h2>
           <p>{{ item.dates }}</p>
         </div>
         <h3 class="m-0 font-light">{{ item.certificate }}</h3>
-      </ng-container>
+      </div>
     </div>
   </div>
 </div>
